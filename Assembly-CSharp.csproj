@@ -55,6 +55,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Script\Combat\Fighter.cs" />
+     <Compile Include="Assets\Script\Combat\Target.cs" />
      <Compile Include="Assets\Script\Control\PlayerController.cs" />
      <Compile Include="Assets\Script\Core\FollowCamera.cs" />
      <Compile Include="Assets\Script\Movement\Mover.cs" />
