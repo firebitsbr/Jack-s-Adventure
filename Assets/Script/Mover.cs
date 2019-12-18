@@ -12,17 +12,23 @@ public class Mover : MonoBehaviour
         if(Input.GetMouseButtonDown(1)){
             moveOnClick();
         }
-
-       
+        updateAnimator();
     }
 
     private void moveOnClick(){
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-
+        
         bool hasHit = Physics.Raycast(ray, out hit);
         if(hasHit){
             GetComponent<NavMeshAgent>().destination = hit.point;
         }
+    }
+
+    private void updateAnimator(){
+        Vector3 vel = GetComponent<NavMeshAgent>().velocity;
+        Vector3 localVel = transform.InverseTransformDirection(vel);
+        float speed = localVel.z;
+        GetComponent<Animator>().SetFloat("forwardSpeed", speed);
     }
 }
