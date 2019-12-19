@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using RPG.Combat;
+using RPG.Core;
 
 namespace RPG.Movement
 {
-    public class Mover : MonoBehaviour
+    public class Mover : MonoBehaviour, IAction
     {
         NavMeshAgent agent;
 
@@ -21,22 +22,24 @@ namespace RPG.Movement
             updateAnimator();
         }
 
-        public void Stop()
+        public void Cancel()
         {
             agent.isStopped = true;
         }
 
-        public void StartMovement(Vector3 dest){
+        public void StartMovement(Vector3 dest)
+        {
+            GetComponent<ActionSchedular>().StartAction(this);
             GetComponent<Fighter>().Cancel();
             moveTo(dest);
         }
-        
+
         public void moveTo(Vector3 dest)
-        {   
-            print(dest);
+        {
             agent.destination = dest;
-            if(agent.transform.position == dest){
-                Stop();
+            if (agent.transform.position == dest)
+            {
+                Cancel();
             }
             agent.isStopped = false;
         }
