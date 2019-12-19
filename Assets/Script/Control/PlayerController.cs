@@ -13,45 +13,39 @@ namespace RPG.Control
         // Update is called once per frame
         void Update()
         {
-            combatMovement();
-            mouseClickMovement();
-
+            if (combatMovement()) return; 
+            if (mouseClickMovement()) return; 
         }
 
-        private void combatMovement()
+        private bool combatMovement()
         {
             RaycastHit[] hitResult = Physics.RaycastAll(getMouseRay());
             foreach (RaycastHit item in hitResult)
             {
-                Target targ = item.transform.GetComponent<Target>();
-                if (targ == null)
-                {
-                    continue;
-                }
+                CombatTarget targ = item.transform.GetComponent<CombatTarget>();
+                if (targ == null) continue;
                 if (Input.GetMouseButtonDown(1))
                 {
-                    GetComponent<Fighter>().Attact(targ);
+                    GetComponent<Fighter>().Attack(targ);
                 }
+                return true;
             }
+            return false;
         }
 
-        private void mouseClickMovement()
-        {
-            if (Input.GetMouseButton(1))
-            {
-                moveOnClick();
-            }
-        }
-
-        private void moveOnClick()
+        private bool mouseClickMovement()
         {
             RaycastHit hit;
-
             bool hasHit = Physics.Raycast(getMouseRay(), out hit);
             if (hasHit)
             {
-                GetComponent<Mover>().moveTo(hit.point);
+                if (Input.GetMouseButton(1))
+                {
+                    GetComponent<Mover>().StartMovement(hit.point);
+                }
+                return true;
             }
+            return false;
         }
 
         private static Ray getMouseRay()
