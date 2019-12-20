@@ -35,10 +35,6 @@ namespace RPG.Movement
         public void moveTo(Vector3 dest)
         {
             agent.destination = dest;
-            if (agent.transform.position == dest)
-            {
-                Cancel();
-            }
             agent.isStopped = false;
         }
 

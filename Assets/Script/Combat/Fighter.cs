@@ -1,13 +1,12 @@
 using UnityEngine;
 using RPG.Movement;
 using RPG.Core;
-using RPG.Combat;
 
 namespace RPG.Combat
 {
     public class Fighter : MonoBehaviour, IAction
     {
-        Transform target;
+        Health target;
         float timeInterval = 0;
         [SerializeField] float range = 2f;
         [SerializeField] float attackTime = 1f;
@@ -18,9 +17,11 @@ namespace RPG.Combat
             timeInterval += Time.deltaTime;
             if (target == null) return;
 
+            if (target.IsDead()) return;
+
             if (GetRange())
             {
-                GetComponent<Mover>().moveTo(target.position);
+                GetComponent<Mover>().moveTo(target.transform.position);
             }
             else
             {
@@ -35,8 +36,6 @@ namespace RPG.Combat
             {
                 GetComponent<Animator>().SetTrigger("attack");
                 timeInterval = 0;
-                Health health = target.GetComponent<Health>();
-                health.TakeDamage(weaponDmg);
             }
 
         }
@@ -44,22 +43,23 @@ namespace RPG.Combat
         public void Attack(CombatTarget combatTarget)
         {
             GetComponent<ActionSchedular>().StartAction(this);
-            target = combatTarget.transform;
+            target = combatTarget.GetComponent<Health>();
         }
 
-        private bool GetRange()
+        private bool GetRange() 
         {
-            return Vector3.Distance(transform.position, target.position) >= range;
+            return Vector3.Distance(transform.position, target.transform.position) >= range;
         }
 
         public void Cancel()
-        {
+        {    
+            GetComponent<Animator>().SetTrigger("stopAttack");
             target = null;
         }
 
         void Hit()
         {
-
+            target.TakeDamage(weaponDmg);
         }
     }
 }
