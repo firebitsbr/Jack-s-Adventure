@@ -4,15 +4,22 @@ using UnityEngine;
 using RPG.Movement;
 using System;
 using RPG.Combat;
+using RPG.Core;
 
 namespace RPG.Control
 {
-
     public class PlayerController : MonoBehaviour
     {
-        // Update is called once per frame
-        void Update()
+        Health health;
+
+        private void Start()
         {
+            health = GetComponent<Health>();
+        }
+        // Update is called once per frame
+        private void Update()
+        {
+            if (health.IsDead()) return;
             if (combatMovement()) return;
             if (mouseClickMovement()) return;
         }

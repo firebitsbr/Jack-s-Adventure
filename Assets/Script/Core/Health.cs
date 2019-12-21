@@ -1,13 +1,14 @@
 using UnityEngine;
 
-namespace RPG.Combat
+namespace RPG.Core
 {
     public class Health : MonoBehaviour
     {
         float health = 100f;
         bool isDead = false;
 
-        public bool IsDead(){
+        public bool IsDead()
+        {
             return isDead;
         }
 
@@ -18,8 +19,8 @@ namespace RPG.Combat
             {
                 GetComponent<Animator>().SetTrigger("die");
                 isDead = true;
+                GetComponent<ActionSchedular>().CancelCurrentAction();
             }
-            print(health);
         }
     }
 }

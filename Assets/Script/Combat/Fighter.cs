@@ -7,7 +7,7 @@ namespace RPG.Combat
     public class Fighter : MonoBehaviour, IAction
     {
         Health target;
-        float timeInterval = 0;
+        float timeInterval = Mathf.Infinity;
         [SerializeField] float range = 2f;
         [SerializeField] float attackTime = 1f;
         [SerializeField] float weaponDmg = 20f;

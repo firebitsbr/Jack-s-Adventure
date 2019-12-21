@@ -85,11 +85,11 @@
      <Compile Include="Assets\RPG Character Animation Pack FREE\SuperCharacterController\SuperCharacterController\Math3d.cs" />
      <Compile Include="Assets\Script\Combat\CombatTarget.cs" />
      <Compile Include="Assets\Script\Combat\Fighter.cs" />
-     <Compile Include="Assets\Script\Combat\Health.cs" />
      <Compile Include="Assets\Script\Control\AiController.cs" />
      <Compile Include="Assets\Script\Control\PlayerController.cs" />
      <Compile Include="Assets\Script\Core\ActionSchedular.cs" />
      <Compile Include="Assets\Script\Core\FollowCamera.cs" />
+     <Compile Include="Assets\Script\Core\Health.cs" />
      <Compile Include="Assets\Script\Core\IAction.cs" />
      <Compile Include="Assets\Script\Movement\Mover.cs" />
      <Compile Include="Assets\SimpleSkeletonFree\Script\Character\PlayerController.cs" />
