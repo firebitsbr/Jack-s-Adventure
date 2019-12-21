@@ -86,6 +86,7 @@
      <Compile Include="Assets\Script\Combat\CombatTarget.cs" />
      <Compile Include="Assets\Script\Combat\Fighter.cs" />
      <Compile Include="Assets\Script\Combat\Health.cs" />
+     <Compile Include="Assets\Script\Control\AiController.cs" />
      <Compile Include="Assets\Script\Control\PlayerController.cs" />
      <Compile Include="Assets\Script\Core\ActionSchedular.cs" />
      <Compile Include="Assets\Script\Core\FollowCamera.cs" />

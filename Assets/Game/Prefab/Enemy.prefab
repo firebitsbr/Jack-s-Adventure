@@ -38,6 +38,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77222eca137b3ba49ae5aaaa8495f691, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &552743863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8192715784112975590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bf17d2a3697de24daf2644518557fd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 2
+  attackTime: 1
+  weaponDmg: 20
+--- !u!114 &552743869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8192715784112975590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5579d89bc9e0ed14ead5967cbe133930, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chaseDistance: 5
+--- !u!114 &552743871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8192715784112975590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57734a8d073511c4e85bc89b4fe7a1d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8192715784113072622
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47,12 +87,20 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100104, guid: de5eab967c5239c45b75177c02c52b8a, type: 3}
       propertyPath: m_Name
-      value: Enemy
+      value: Enemy 1
       objectReference: {fileID: 0}
-    - target: {fileID: 100104, guid: de5eab967c5239c45b75177c02c52b8a, type: 3}
-      propertyPath: m_IsActive
+    - target: {fileID: 9500000, guid: de5eab967c5239c45b75177c02c52b8a, type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: de5eab967c5239c45b75177c02c52b8a, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 90489df45abea754a85d8bef00a4b8f2, type: 2}
+    - target: {fileID: 11100000, guid: de5eab967c5239c45b75177c02c52b8a, type: 3}
+      propertyPath: m_Animation
+      value: 
+      objectReference: {fileID: 7400002, guid: 35b9df0d8ef0ab44abeb1b0a9e586310, type: 3}
     - target: {fileID: 400104, guid: de5eab967c5239c45b75177c02c52b8a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.11
@@ -109,22 +157,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 11100000, guid: de5eab967c5239c45b75177c02c52b8a, type: 3}
-      propertyPath: m_CullingType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11100000, guid: de5eab967c5239c45b75177c02c52b8a, type: 3}
-      propertyPath: m_Animation
-      value: 
-      objectReference: {fileID: 7400002, guid: 35b9df0d8ef0ab44abeb1b0a9e586310, type: 3}
-    - target: {fileID: 9500000, guid: de5eab967c5239c45b75177c02c52b8a, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9500000, guid: de5eab967c5239c45b75177c02c52b8a, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 90489df45abea754a85d8bef00a4b8f2, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de5eab967c5239c45b75177c02c52b8a, type: 3}
 --- !u!1 &8192715784112975590 stripped

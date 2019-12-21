@@ -40,7 +40,7 @@ namespace RPG.Combat
 
         }
 
-        public void Attack(CombatTarget combatTarget)
+        public void Attack(GameObject combatTarget)
         {
             GetComponent<ActionSchedular>().StartAction(this);
             target = combatTarget.GetComponent<Health>();
@@ -48,7 +48,7 @@ namespace RPG.Combat
 
         }
 
-        public bool canAttack(CombatTarget targ)
+        public bool canAttack(GameObject targ)
         {
             Health currentTarget = targ.GetComponent<Health>();
             if (currentTarget.IsDead())
