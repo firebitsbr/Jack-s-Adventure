@@ -13,8 +13,8 @@ namespace RPG.Control
         // Update is called once per frame
         void Update()
         {
-            if (combatMovement()) return; 
-            if (mouseClickMovement()) return; 
+            if (combatMovement()) return;
+            if (mouseClickMovement()) return;
         }
 
         private bool combatMovement()
@@ -26,7 +26,10 @@ namespace RPG.Control
                 if (targ == null) continue;
                 if (Input.GetMouseButtonDown(1))
                 {
-                    GetComponent<Fighter>().Attack(targ);
+                    if (GetComponent<Fighter>().canAttack(targ))
+                    {
+                        GetComponent<Fighter>().Attack(targ);
+                    }
                 }
                 return true;
             }

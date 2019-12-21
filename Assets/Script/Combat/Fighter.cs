@@ -25,7 +25,6 @@ namespace RPG.Combat
             }
             else
             {
-
                 StartAttack();
                 GetComponent<Mover>().Cancel();
             }
@@ -45,22 +44,41 @@ namespace RPG.Combat
         {
             GetComponent<ActionSchedular>().StartAction(this);
             target = combatTarget.GetComponent<Health>();
+            transform.LookAt(target.transform);
+
         }
 
-        private bool GetRange() 
+        public bool canAttack(CombatTarget targ)
+        {
+            Health currentTarget = targ.GetComponent<Health>();
+            if (currentTarget.IsDead())
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        private bool GetRange()
         {
             return Vector3.Distance(transform.position, target.transform.position) >= range;
         }
 
         public void Cancel()
-        {    
+        {
             // GetComponent<Animator>().SetTrigger("stopAttack");
             target = null;
         }
 
         void Hit()
         {
-            target.TakeDamage(weaponDmg);
+            if (target != null)
+            {
+                target.TakeDamage(weaponDmg);
+            }
+
         }
     }
 }

@@ -91,6 +91,7 @@
      <Compile Include="Assets\Script\Core\FollowCamera.cs" />
      <Compile Include="Assets\Script\Core\IAction.cs" />
      <Compile Include="Assets\Script\Movement\Mover.cs" />
+     <Compile Include="Assets\SimpleSkeletonFree\Script\Character\PlayerController.cs" />
      <None Include="Assets\RPG Character Animation Pack FREE\Elements\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\RPG Character Animation Pack FREE\Elements\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
      <None Include="Assets\RPG Character Animation Pack FREE\Elements\ImageEffects\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />
