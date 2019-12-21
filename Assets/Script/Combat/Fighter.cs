@@ -25,8 +25,9 @@ namespace RPG.Combat
             }
             else
             {
-                GetComponent<Mover>().Cancel();
+
                 StartAttack();
+                GetComponent<Mover>().Cancel();
             }
         }
 
@@ -53,7 +54,7 @@ namespace RPG.Combat
 
         public void Cancel()
         {    
-            GetComponent<Animator>().SetTrigger("stopAttack");
+            // GetComponent<Animator>().SetTrigger("stopAttack");
             target = null;
         }
 
