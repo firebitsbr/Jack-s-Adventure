@@ -31,7 +31,7 @@ namespace RPG.Control
             {
                 CombatTarget targ = item.transform.GetComponent<CombatTarget>();
                 if (targ == null) continue;
-                if (Input.GetMouseButtonDown(1))
+                if (Input.GetMouseButton(1))
                 {
                     if (GetComponent<Fighter>().canAttack(targ.gameObject))
                     {
