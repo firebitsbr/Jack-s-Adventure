@@ -260,6 +260,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.9
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: e16ebd76d5ceffd4ea77091388330041, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f12ec8564ad148e48ad0b47e2b9262cc, type: 2}
     - target: {fileID: 1776333029, guid: e16ebd76d5ceffd4ea77091388330041, type: 3}
       propertyPath: weaponDmg
       value: 10
@@ -1117,7 +1121,7 @@ PrefabInstance:
     - target: {fileID: 9500000, guid: a9a1333964c1bd94d855c53081841cb1, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 90489df45abea754a85d8bef00a4b8f2, type: 2}
+      objectReference: {fileID: 9100000, guid: f12ec8564ad148e48ad0b47e2b9262cc, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9a1333964c1bd94d855c53081841cb1, type: 3}
 --- !u!1 &1472706542 stripped
@@ -2072,6 +2076,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8192715784105712782, guid: cc99320f66402d04fbd285fefe3d2314,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f12ec8564ad148e48ad0b47e2b9262cc, type: 2}
+    - target: {fileID: 8192715784113206100, guid: cc99320f66402d04fbd285fefe3d2314,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.003339073
+      objectReference: {fileID: 0}
+    - target: {fileID: 8192715784113206100, guid: cc99320f66402d04fbd285fefe3d2314,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7067728
+      objectReference: {fileID: 0}
+    - target: {fileID: 8192715784113206088, guid: cc99320f66402d04fbd285fefe3d2314,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.0033390718
+      objectReference: {fileID: 0}
+    - target: {fileID: 8192715784113206088, guid: cc99320f66402d04fbd285fefe3d2314,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7067728
       objectReference: {fileID: 0}
     - target: {fileID: 552743863, guid: cc99320f66402d04fbd285fefe3d2314, type: 3}
       propertyPath: weaponDmg
