@@ -10,6 +10,7 @@ namespace RPG.Movement
     {
         NavMeshAgent agent;
         Health health;
+        [SerializeField] float maxSpeed = 7f;
 
         private void Start()
         {
@@ -39,6 +40,11 @@ namespace RPG.Movement
         {
             agent.destination = dest;
             agent.isStopped = false;
+        }
+
+        public void setSpeed(float speed)
+        {
+            agent.speed = speed;
         }
 
         private void updateAnimator()

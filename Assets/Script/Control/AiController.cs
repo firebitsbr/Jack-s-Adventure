@@ -12,6 +12,8 @@ namespace RPG.Control
         [SerializeField] PatrolPath patrolPath;
         [SerializeField] float pointDistance = 3f;
         [SerializeField] float dwellingTime = 2f;
+        [Range(0, 1)]
+        [SerializeField] float patrolSpeed = 0.2f;
 
         GameObject player;
         Fighter fighter;
@@ -38,6 +40,7 @@ namespace RPG.Control
             if (InRange() && fighter.canAttack(player)) //Attacking
             {
                 timeSinceLastPlayer = 0;
+                mover.setSpeed(6f);
                 GetComponent<Fighter>().Attack(player);
             }
             else if (timeSinceLastPlayer < wanderTime) //Wandering
@@ -46,6 +49,7 @@ namespace RPG.Control
             }
             else
             {
+                mover.setSpeed(3f);
                 Patrolling();//Patrolling
 
             }
