@@ -146,6 +146,7 @@
      <None Include="Assets\RPG Character Animation Pack FREE\Elements\ImageEffects\Shaders\VignettingShader.shader" />
      <None Include="Assets\RPG Character Animation Pack FREE\Elements\ImageEffects\Shaders\Tonemapper.shader" />
      <None Include="Assets\RPG Character Animation Pack FREE\Elements\ImageEffects\Shaders\_BloomAndFlares\BrightPassFilter.shader" />
+     <None Include="Assets\Wand and Circles\Polygon City Free Pack - Environment and Interior\Materials\Double Sided Standard Diffuse Bump.shader" />
      <None Include="Assets\RPG Character Animation Pack FREE\Elements\ImageEffects\Shaders\_Antialiasing\FXAA2.shader" />
      <None Include="Assets\RPG Character Animation Pack FREE\Elements\ImageEffects\Shaders\ColorCorrection3DLut.shader" />
      <None Include="Assets\RPG Character Animation Pack FREE\Elements\ImageEffects\Shaders\_BloomAndFlares\LensFlareCreate.shader" />
