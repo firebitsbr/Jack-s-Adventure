@@ -11330,6 +11330,7 @@ GameObject:
   - component: {fileID: 1751858740}
   - component: {fileID: 1751858739}
   - component: {fileID: 1751858738}
+  - component: {fileID: 1751858741}
   m_Layer: 5
   m_Name: Fader
   m_TagString: Untagged
@@ -11429,7 +11430,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.2171591, g: 0.754717, b: 0.26787212, a: 1}
+  m_Color: {r: 0.73571557, g: 0.9339623, b: 0.8044745, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -11465,6 +11466,18 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &1751858741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751858733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2821adc5949dda4e9819e2cbec10650, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1755619900
 GameObject:
   m_ObjectHideFlags: 0
@@ -15613,37 +15626,37 @@ PrefabInstance:
     - target: {fileID: 9207838752139259788, guid: 2914e32a66f0a3a4a979425670a60f00,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.6332746
+      value: 113.860054
       objectReference: {fileID: 0}
     - target: {fileID: 9207838752139259788, guid: 2914e32a66f0a3a4a979425670a60f00,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.97295
+      value: 7.047835
       objectReference: {fileID: 0}
     - target: {fileID: 9207838752139259788, guid: 2914e32a66f0a3a4a979425670a60f00,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 79.5326
+      value: 39.33491
       objectReference: {fileID: 0}
     - target: {fileID: 9207838752139259788, guid: 2914e32a66f0a3a4a979425670a60f00,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.16306399
+      value: -0.015956845
       objectReference: {fileID: 0}
     - target: {fileID: 9207838752139259788, guid: 2914e32a66f0a3a4a979425670a60f00,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.8343832
+      value: 0.97825915
       objectReference: {fileID: 0}
     - target: {fileID: 9207838752139259788, guid: 2914e32a66f0a3a4a979425670a60f00,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.33487946
+      value: -0.18969087
       objectReference: {fileID: 0}
     - target: {fileID: 9207838752139259788, guid: 2914e32a66f0a3a4a979425670a60f00,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.40628895
+      value: -0.08229141
       objectReference: {fileID: 0}
     - target: {fileID: 9207838752139259788, guid: 2914e32a66f0a3a4a979425670a60f00,
         type: 3}
