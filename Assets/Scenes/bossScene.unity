@@ -224,9 +224,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ad980451443d70438faac0bc6c235a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_LookaheadTime: 0.4
-  m_LookaheadSmoothing: 10
-  m_LookaheadIgnoreY: 0
+  m_LookaheadTime: 0.1
+  m_LookaheadSmoothing: 20
+  m_LookaheadIgnoreY: 1
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -718,6 +718,11 @@ PrefabInstance:
       propertyPath: fadeInTime
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6028701400983755313, guid: a24503e754a70cf46b5a56fa8b41822c,
+        type: 3}
+      propertyPath: fadeOutTime
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a24503e754a70cf46b5a56fa8b41822c, type: 3}
 --- !u!1001 &1577237590
@@ -844,6 +849,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -17.121
       objectReference: {fileID: 0}
+    - target: {fileID: 744400091, guid: 2914e32a66f0a3a4a979425670a60f00, type: 3}
+      propertyPath: sharedObject
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2914e32a66f0a3a4a979425670a60f00, type: 3}
 --- !u!1001 &1746967765
@@ -912,6 +921,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 535097392600200107, guid: 0f318af8c66c4d642b43e2aa15c4ba8b,
+        type: 3}
+      propertyPath: uniqueIdentifier
+      value: e8b2eddd-56f7-4149-b413-46355e1ffb10
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7665821701844807972, guid: 0f318af8c66c4d642b43e2aa15c4ba8b, type: 3}

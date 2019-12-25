@@ -105,6 +105,7 @@
      <Compile Include="Assets\Script\Saving\SerializableVector3.cs" />
      <Compile Include="Assets\Script\Scene Management\Fader.cs" />
      <Compile Include="Assets\Script\Scene Management\Portal.cs" />
+     <Compile Include="Assets\Script\Scene Management\SavingManager.cs" />
      <None Include="Assets\Asset Store\RPG Character Animation Pack FREE\Elements\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Asset Store\RPG Character Animation Pack FREE\Elements\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
      <None Include="Assets\Asset Store\RPG Character Animation Pack FREE\Elements\ImageEffects\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />
