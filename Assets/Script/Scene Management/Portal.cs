@@ -16,6 +16,9 @@ namespace RPG.SceneManagement
         [SerializeField] int nextScene = -1;
         [SerializeField] Transform spawnPoint;
         [SerializeField] Destiniation dest;
+        [SerializeField] float fadeOutTime = 1f;
+        [SerializeField] float fadeTime = 0.5f;
+        [SerializeField] float fadeInTime = 1f;
 
 
         private void OnTriggerEnter(Collider other)
@@ -34,10 +37,15 @@ namespace RPG.SceneManagement
                 yield break;
             }
 
+
             DontDestroyOnLoad(gameObject);
+            Fader fader = FindObjectOfType<Fader>();
+
             yield return SceneManager.LoadSceneAsync(nextScene);
 
             updatePlayer(getPortal());
+            yield return new WaitForSeconds(fadeTime);
+            yield return fader.fadeIn(fadeInTime);
 
             Destroy(gameObject);
         }
@@ -62,6 +70,7 @@ namespace RPG.SceneManagement
         private void updatePlayer(Portal portal)
         {
             GameObject player = GameObject.FindWithTag("Player");
+            print(portal.spawnPoint.position);
             player.GetComponent<NavMeshAgent>().Warp(portal.spawnPoint.position);
             player.transform.rotation = portal.spawnPoint.rotation;
         }

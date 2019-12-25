@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6028701400983755317}
   - component: {fileID: 6028701400983755313}
   - component: {fileID: 2003576038}
+  - component: {fileID: 2057952471}
   m_Layer: 2
   m_Name: Portal
   m_TagString: Untagged
@@ -107,9 +108,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0da546e37c6d7f47b97d36cc8dab01d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: 0
+  nextScene: 1
   spawnPoint: {fileID: 8107536147122899402}
   dest: 0
+  fadeOutTime: 1
+  fadeTime: 0.5
+  fadeInTime: 1
 --- !u!54 &2003576038
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -126,6 +130,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2057952471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6028701400983755316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c0cfac695b028542abbe08ed343b781, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedObject: {fileID: 4960679752484364632, guid: 8f67d6ec0668e88499b7f639fbc99614,
+    type: 3}
 --- !u!1 &8240075632291496195
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,7 +168,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8240075632291496195}
   m_LocalRotation: {x: -0, y: 0.8027516, z: -0, w: 0.59631366}
-  m_LocalPosition: {x: 0.9999999, y: -1.6, z: -0.00000015894572}
+  m_LocalPosition: {x: -0.098, y: -1.6, z: -1.292}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6028701400983755312}
