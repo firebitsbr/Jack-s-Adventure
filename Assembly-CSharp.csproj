@@ -97,7 +97,6 @@
      <Compile Include="Assets\Script\Core\FollowCamera.cs" />
      <Compile Include="Assets\Script\Core\Health.cs" />
      <Compile Include="Assets\Script\Core\IAction.cs" />
-     <Compile Include="Assets\Script\Core\SharedSpawner.cs" />
      <Compile Include="Assets\Script\Movement\Mover.cs" />
      <Compile Include="Assets\Script\Scene Management\Fader.cs" />
      <Compile Include="Assets\Script\Scene Management\Portal.cs" />
