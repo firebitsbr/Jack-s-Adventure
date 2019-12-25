@@ -16,6 +16,9 @@ namespace RPG.SceneManagement
         [SerializeField] int nextScene = -1;
         [SerializeField] Transform spawnPoint;
         [SerializeField] Destiniation dest;
+        [SerializeField] float fadeOutTime = 1f;
+        [SerializeField] float fadeWaitTime = 0.5f;
+        [SerializeField] float fadeInTime = 1f;
 
 
         private void OnTriggerEnter(Collider other)
@@ -35,9 +38,16 @@ namespace RPG.SceneManagement
             }
 
             DontDestroyOnLoad(gameObject);
+
+            Fader fader = FindObjectOfType<Fader>();
+
+            yield return fader.fadeOut(fadeOutTime);
+
             yield return SceneManager.LoadSceneAsync(nextScene);
 
             updatePlayer(getPortal());
+            yield return new WaitForSeconds(fadeWaitTime);
+            yield return fader.fadeIn(fadeInTime);
 
             Destroy(gameObject);
         }
