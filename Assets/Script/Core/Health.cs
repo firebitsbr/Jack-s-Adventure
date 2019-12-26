@@ -3,7 +3,7 @@ using RPG.Saving;
 
 namespace RPG.Core
 {
-    public class Health : MonoBehaviour, ISaveable
+    public class Health : MonoBehaviour
     {
         [SerializeField] float health = 100f;
         bool isDead = false;

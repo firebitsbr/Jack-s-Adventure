@@ -43,14 +43,10 @@ namespace RPG.SceneManagement
 
             yield return fader.fadeOut(fadeOutTime);
 
-            SavingManager saveManager = FindObjectOfType<SavingManager>();
-            saveManager.saveManager();
-
             yield return SceneManager.LoadSceneAsync(nextScene);
 
-            saveManager.loadManager();
-
             updatePlayer(getPortal());
+
             yield return new WaitForSeconds(fadeWaitTime);
             yield return fader.fadeIn(fadeInTime);
 
@@ -77,8 +73,10 @@ namespace RPG.SceneManagement
         private void updatePlayer(Portal portal)
         {
             GameObject player = GameObject.FindWithTag("Player");
+            player.GetComponent<NavMeshAgent>().enabled = false;
             player.GetComponent<NavMeshAgent>().Warp(portal.spawnPoint.position);
             player.transform.rotation = portal.spawnPoint.rotation;
+            player.GetComponent<NavMeshAgent>().enabled = true;
         }
     }
 }
