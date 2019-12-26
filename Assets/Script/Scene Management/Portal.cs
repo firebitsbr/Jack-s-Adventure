@@ -43,7 +43,12 @@ namespace RPG.SceneManagement
 
             yield return fader.fadeOut(fadeOutTime);
 
+            SavingManager saveManager = FindObjectOfType<SavingManager>();
+            saveManager.saveManager();
+
             yield return SceneManager.LoadSceneAsync(nextScene);
+
+            saveManager.loadManager();
 
             updatePlayer(getPortal());
             yield return new WaitForSeconds(fadeWaitTime);
