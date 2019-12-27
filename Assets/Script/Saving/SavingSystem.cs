@@ -1,53 +1,88 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace RPG.Saving
 {
     public class SavingSystem : MonoBehaviour
     {
+        public IEnumerator loadLastScene(string saveFile)
+        {
+            Dictionary<string, object> state = loadFile(saveFile);
+            if (state.ContainsKey("lastScene"))
+            {
+                int index = (int)state["lastScene"];
+                if (index != SceneManager.GetActiveScene().buildIndex)
+                {
+                    yield return SceneManager.LoadSceneAsync(index);
+                }
+            }
+            restoreState(state);
+        }
+
         public void Save(string saveFile)
+        {
+            Dictionary<string, object> state = loadFile(saveFile);
+            captureState(state);
+            saveFileManager(saveFile, state);
+        }
+
+        public void Load(string saveFile)
+        {
+            restoreState(loadFile(saveFile));
+        }
+
+        private void restoreState(Dictionary<string, object> restore)
+        {
+            foreach (SavableEntity i in FindObjectsOfType<SavableEntity>())
+            {
+                string id = i.getUniqueIdentifier();
+                if (restore.ContainsKey(id))
+                {
+                    i.restoreState(restore[id]);
+                }
+
+            }
+
+        }
+
+        private Dictionary<string, object> loadFile(string saveFile)
+        {
+            string path = getPath(saveFile);
+            if (!File.Exists(path))
+            {
+                return new Dictionary<string, object>();
+            }
+            using (FileStream stream = File.Open(path, FileMode.Open))
+            {
+                BinaryFormatter formatter = new BinaryFormatter();
+                return (Dictionary<string, object>)formatter.Deserialize(stream);
+            }
+        }
+
+        private void saveFileManager(string saveFile, object state)
         {
             string path = getPath(saveFile);
             print("Save to " + path);
             using (FileStream stream = File.Open(path, FileMode.Create))
             {
                 BinaryFormatter formatter = new BinaryFormatter();
-                formatter.Serialize(stream, captureState());
+                formatter.Serialize(stream, state);
             };
         }
 
-        public void Load(string saveFile)
+        private void captureState(Dictionary<string, object> state)
         {
-            string path = getPath(saveFile);
-            print("Loading from " + path);
-            using (FileStream stream = File.Open(path, FileMode.Open))
-            {
-                BinaryFormatter formatter = new BinaryFormatter();
-                restoreState(formatter.Deserialize(stream));
-            }
-        }
-
-        private void restoreState(object restore)
-        {
-            Dictionary<string, object> state = (Dictionary<string, object>)restore;
-            foreach (SavableEntity i in FindObjectsOfType<SavableEntity>())
-            {
-                i.restoreState(state[i.getUniqueIdentifier()]);
-            }
-
-        }
-
-        private object captureState()
-        {
-            Dictionary<string, object> state = new Dictionary<string, object>();
             foreach (SavableEntity i in FindObjectsOfType<SavableEntity>())
             {
                 state[i.getUniqueIdentifier()] = i.captureState();
             }
-            return state;
+
+            state["lastScene"] = SceneManager.GetActiveScene().buildIndex;
         }
 
 

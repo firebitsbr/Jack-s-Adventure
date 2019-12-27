@@ -903,7 +903,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae30b387e956e8c45abfb3b7731543f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uniqueIdentifier: fd793c22-91db-492e-b391-b95f95ada452
+  uniqueIdentifier: player
 --- !u!195 &716245342
 NavMeshAgent:
   m_ObjectHideFlags: 0

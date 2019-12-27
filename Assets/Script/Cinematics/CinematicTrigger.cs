@@ -15,6 +15,7 @@ namespace RPG.Cinematic
             {
                 GetComponent<PlayableDirector>().Play();
                 alreadyTriggered = true;
+                
             }
 
         }

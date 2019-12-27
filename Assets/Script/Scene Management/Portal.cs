@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using UnityEngine.AI;
+using RPG.Saving;
 
 namespace RPG.SceneManagement
 {
@@ -40,12 +41,19 @@ namespace RPG.SceneManagement
             DontDestroyOnLoad(gameObject);
 
             Fader fader = FindObjectOfType<Fader>();
+            SaveManager saveManager = FindObjectOfType<SaveManager>();
 
             yield return fader.fadeOut(fadeOutTime);
 
+            saveManager.save();
+
             yield return SceneManager.LoadSceneAsync(nextScene);
 
+            saveManager.load();
+
             updatePlayer(getPortal());
+
+            saveManager.save();
 
             yield return new WaitForSeconds(fadeWaitTime);
             yield return fader.fadeIn(fadeInTime);

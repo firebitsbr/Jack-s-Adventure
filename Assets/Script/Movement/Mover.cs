@@ -7,7 +7,7 @@ using RPG.Saving;
 
 namespace RPG.Movement
 {
-    public class Mover : MonoBehaviour, IAction
+    public class Mover : MonoBehaviour, IAction, Saveable
     {
         NavMeshAgent agent;
         Health health;
@@ -56,5 +56,18 @@ namespace RPG.Movement
             GetComponent<Animator>().SetFloat("forwardSpeed", speed);
         }
 
+        public object captureState()
+        {
+            return new SerializableVector(transform.position);
+        }
+
+        public void restoreState(object state)
+        {
+            SerializableVector position = (SerializableVector)state;
+            GetComponent<NavMeshAgent>().enabled = false;
+            transform.position = position.toVector();
+            GetComponent<NavMeshAgent>().enabled = true;
+            GetComponent<ActionSchedular>().CancelCurrentAction();
+        }
     }
 }

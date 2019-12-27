@@ -51,7 +51,6 @@ namespace RPG.Control
             {
                 if (Input.GetMouseButton(1))
                 {
-                    Debug.DrawLine(getMouseRay().origin, hit.point);
                     GetComponent<Mover>().StartMovement(hit.point);
                 }
                 return true;

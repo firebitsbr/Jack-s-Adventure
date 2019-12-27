@@ -100,6 +100,7 @@
      <Compile Include="Assets\Script\Core\sharedSpawner.cs" />
      <Compile Include="Assets\Script\Movement\Mover.cs" />
      <Compile Include="Assets\Script\Saving\SavableEntity.cs" />
+     <Compile Include="Assets\Script\Saving\Saveable.cs" />
      <Compile Include="Assets\Script\Saving\SaveManager.cs" />
      <Compile Include="Assets\Script\Saving\SavingSystem.cs" />
      <Compile Include="Assets\Script\Saving\SerializableVector.cs" />
