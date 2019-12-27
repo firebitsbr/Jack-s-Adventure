@@ -99,8 +99,10 @@
      <Compile Include="Assets\Script\Core\IAction.cs" />
      <Compile Include="Assets\Script\Core\sharedSpawner.cs" />
      <Compile Include="Assets\Script\Movement\Mover.cs" />
+     <Compile Include="Assets\Script\Saving\SavableEntity.cs" />
      <Compile Include="Assets\Script\Saving\SaveManager.cs" />
      <Compile Include="Assets\Script\Saving\SavingSystem.cs" />
+     <Compile Include="Assets\Script\Saving\SerializableVector.cs" />
      <Compile Include="Assets\Script\Scene Management\Fader.cs" />
      <Compile Include="Assets\Script\Scene Management\Portal.cs" />
      <None Include="Assets\Asset Store\RPG Character Animation Pack FREE\Elements\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
