@@ -480,6 +480,8 @@ MonoBehaviour:
   range: 2
   attackTime: 1.5
   weaponDmg: 10
+  weaponPrefab: {fileID: 0}
+  handsTransform: {fileID: 0}
 --- !u!136 &92463195
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1001,6 +1003,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2043158824}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &860119739 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7665821701660499646, guid: 0f318af8c66c4d642b43e2aa15c4ba8b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1746967765}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1138024114 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1319517528997712, guid: 1543549dcdf638d488bd40cb68dd9b8e,
@@ -1062,6 +1070,8 @@ MonoBehaviour:
   range: 2
   attackTime: 1.5
   weaponDmg: 15
+  weaponPrefab: {fileID: 0}
+  handsTransform: {fileID: 0}
 --- !u!114 &1138024118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1494,6 +1504,8 @@ MonoBehaviour:
   range: 2
   attackTime: 1.5
   weaponDmg: 15
+  weaponPrefab: {fileID: 0}
+  handsTransform: {fileID: 0}
 --- !u!195 &1210691616
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1588,6 +1600,8 @@ MonoBehaviour:
   range: 2
   attackTime: 1.5
   weaponDmg: 10
+  weaponPrefab: {fileID: 0}
+  handsTransform: {fileID: 0}
 --- !u!195 &1245052196
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2072,6 +2086,17 @@ PrefabInstance:
       propertyPath: uniqueIdentifier
       value: player
       objectReference: {fileID: 0}
+    - target: {fileID: 5654109230926544016, guid: 0f318af8c66c4d642b43e2aa15c4ba8b,
+        type: 3}
+      propertyPath: weaponPrefab
+      value: 
+      objectReference: {fileID: 3565496161623530172, guid: a2860fc3bb5df1f48a8cf282495b0456,
+        type: 3}
+    - target: {fileID: 5654109230926544016, guid: 0f318af8c66c4d642b43e2aa15c4ba8b,
+        type: 3}
+      propertyPath: handsTransform
+      value: 
+      objectReference: {fileID: 860119739}
     m_RemovedComponents:
     - {fileID: 7665821701844807972, guid: 0f318af8c66c4d642b43e2aa15c4ba8b, type: 3}
     - {fileID: 535097392600200107, guid: 0f318af8c66c4d642b43e2aa15c4ba8b, type: 3}

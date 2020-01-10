@@ -1874,6 +1874,8 @@ MonoBehaviour:
   range: 2
   attackTime: 1.5
   weaponDmg: 15
+  weaponPrefab: {fileID: 0}
+  handsTransform: {fileID: 0}
 --- !u!114 &60673391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5861,7 +5863,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 1.0200259e+14, z: 6.94e-43, w: 7.885627e+13}
+  m_BoundingSphereOverride: {x: 0, y: 9.2229535e-30, z: 6.4e-43, w: 9.2229535e-30}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -8054,6 +8056,17 @@ PrefabInstance:
       propertyPath: maxSpeed
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 5654109230926544016, guid: 0f318af8c66c4d642b43e2aa15c4ba8b,
+        type: 3}
+      propertyPath: weaponPrefab
+      value: 
+      objectReference: {fileID: 3565496161623530172, guid: a2860fc3bb5df1f48a8cf282495b0456,
+        type: 3}
+    - target: {fileID: 5654109230926544016, guid: 0f318af8c66c4d642b43e2aa15c4ba8b,
+        type: 3}
+      propertyPath: handsTransform
+      value: 
+      objectReference: {fileID: 2034778262}
     m_RemovedComponents:
     - {fileID: 535097392600200107, guid: 0f318af8c66c4d642b43e2aa15c4ba8b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0f318af8c66c4d642b43e2aa15c4ba8b, type: 3}
@@ -10307,6 +10320,8 @@ MonoBehaviour:
   range: 2
   attackTime: 1.5
   weaponDmg: 15
+  weaponPrefab: {fileID: 0}
+  handsTransform: {fileID: 0}
 --- !u!114 &1433789653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11134,6 +11149,8 @@ MonoBehaviour:
   range: 2
   attackTime: 1
   weaponDmg: 20
+  weaponPrefab: {fileID: 0}
+  handsTransform: {fileID: 0}
 --- !u!114 &1724038284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12037,6 +12054,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4183516897102132, guid: 7689b2d5def66f04eb3b0905d7b65084,
     type: 3}
   m_PrefabInstance: {fileID: 1236999669}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2034778262 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7665821701660499646, guid: 0f318af8c66c4d642b43e2aa15c4ba8b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1202957276}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2039514535
 PrefabInstance:
