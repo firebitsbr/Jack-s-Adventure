@@ -482,6 +482,7 @@ MonoBehaviour:
   weaponDmg: 10
   weaponPrefab: {fileID: 0}
   handsTransform: {fileID: 0}
+  weaponOveride: {fileID: 0}
 --- !u!136 &92463195
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1072,6 +1073,7 @@ MonoBehaviour:
   weaponDmg: 15
   weaponPrefab: {fileID: 0}
   handsTransform: {fileID: 0}
+  weaponOveride: {fileID: 0}
 --- !u!114 &1138024118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1506,6 +1508,7 @@ MonoBehaviour:
   weaponDmg: 15
   weaponPrefab: {fileID: 0}
   handsTransform: {fileID: 0}
+  weaponOveride: {fileID: 0}
 --- !u!195 &1210691616
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1602,6 +1605,7 @@ MonoBehaviour:
   weaponDmg: 10
   weaponPrefab: {fileID: 0}
   handsTransform: {fileID: 0}
+  weaponOveride: {fileID: 0}
 --- !u!195 &1245052196
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2097,6 +2101,12 @@ PrefabInstance:
       propertyPath: handsTransform
       value: 
       objectReference: {fileID: 860119739}
+    - target: {fileID: 5654109230926544016, guid: 0f318af8c66c4d642b43e2aa15c4ba8b,
+        type: 3}
+      propertyPath: weaponOveride
+      value: 
+      objectReference: {fileID: 22100000, guid: dca332de4f726c34a92fa6d4e2ddc051,
+        type: 2}
     m_RemovedComponents:
     - {fileID: 7665821701844807972, guid: 0f318af8c66c4d642b43e2aa15c4ba8b, type: 3}
     - {fileID: 535097392600200107, guid: 0f318af8c66c4d642b43e2aa15c4ba8b, type: 3}

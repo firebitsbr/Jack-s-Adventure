@@ -13,6 +13,7 @@ namespace RPG.Combat
         [SerializeField] float weaponDmg = 20f;
         [SerializeField] GameObject weaponPrefab = null;
         [SerializeField] Transform handsTransform = null;
+        [SerializeField] AnimatorOverrideController weaponOveride;
 
         private void Start()
         {
@@ -40,6 +41,8 @@ namespace RPG.Combat
         private void SpawnWeapon()
         {
             Instantiate(weaponPrefab, handsTransform);
+            Animator animator = GetComponent<Animator>();
+            animator.runtimeAnimatorController = weaponOveride;
         }
 
         private void StartAttack()

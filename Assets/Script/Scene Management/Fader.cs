@@ -31,7 +31,6 @@ namespace RPG.SceneManagement
         {
             while (canvasGroup.alpha > 0)
             {
-                print(canvasGroup.alpha);
                 canvasGroup.alpha -= Time.deltaTime / time;
                 yield return null;
             }
