@@ -90,6 +90,7 @@
      <Compile Include="Assets\Script\Cinematics\ControlRemover.cs" />
      <Compile Include="Assets\Script\Combat\CombatTarget.cs" />
      <Compile Include="Assets\Script\Combat\Fighter.cs" />
+     <Compile Include="Assets\Script\Combat\Weapon.cs" />
      <Compile Include="Assets\Script\Control\AiController.cs" />
      <Compile Include="Assets\Script\Control\PatrolPath.cs" />
      <Compile Include="Assets\Script\Control\PlayerController.cs" />

@@ -11,9 +11,9 @@ namespace RPG.Combat
         [SerializeField] float range = 2f;
         [SerializeField] float attackTime = 1f;
         [SerializeField] float weaponDmg = 20f;
-        [SerializeField] GameObject weaponPrefab = null;
         [SerializeField] Transform handsTransform = null;
-        [SerializeField] AnimatorOverrideController weaponOveride;
+        [SerializeField] Weapon weapon = null;
+
 
         private void Start()
         {
@@ -40,9 +40,12 @@ namespace RPG.Combat
 
         private void SpawnWeapon()
         {
-            Instantiate(weaponPrefab, handsTransform);
+            if (weapon == null)
+            {
+                return;
+            }
             Animator animator = GetComponent<Animator>();
-            animator.runtimeAnimatorController = weaponOveride;
+            weapon.spawn(handsTransform, animator);
         }
 
         private void StartAttack()
