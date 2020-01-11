@@ -12,12 +12,14 @@ namespace RPG.Combat
         [SerializeField] float attackTime = 1f;
 
         [SerializeField] Transform handsTransform = null;
-        [SerializeField] Weapon weapon = null;
+        [SerializeField] Weapon defaultWeapon = null;
+
+        Weapon currentWeapon = null;
 
 
         private void Start()
         {
-            SpawnWeapon();
+            SpawnWeapon(defaultWeapon);
         }
 
         private void Update()
@@ -27,7 +29,7 @@ namespace RPG.Combat
 
             if (target.IsDead())
             {
-                Cancel(); 
+                Cancel();
                 return;
             }
 
@@ -42,12 +44,9 @@ namespace RPG.Combat
             }
         }
 
-        private void SpawnWeapon()
+        public void SpawnWeapon(Weapon weapon)
         {
-            if (weapon == null)
-            {
-                return;
-            }
+            currentWeapon = weapon;
             Animator animator = GetComponent<Animator>();
             weapon.spawn(handsTransform, animator);
         }
@@ -85,7 +84,7 @@ namespace RPG.Combat
 
         private bool GetRange()
         {
-            return Vector3.Distance(transform.position, target.transform.position) >= weapon.getRange();
+            return Vector3.Distance(transform.position, target.transform.position) >= currentWeapon.getRange();
         }
 
         public void Cancel()
@@ -98,7 +97,7 @@ namespace RPG.Combat
         {
             if (target != null)
             {
-                target.TakeDamage(weapon.getDmamage());
+                target.TakeDamage(currentWeapon.getDmamage());
             }
 
         }

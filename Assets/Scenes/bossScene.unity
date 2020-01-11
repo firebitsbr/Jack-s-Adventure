@@ -479,7 +479,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackTime: 1.5
   handsTransform: {fileID: 92463196}
-  weapon: {fileID: 11400000, guid: 0e8b32628ca4ffb45a0a596ae73a3874, type: 2}
+  defaultWeapon: {fileID: 11400000, guid: 0e8b32628ca4ffb45a0a596ae73a3874, type: 2}
 --- !u!136 &92463195
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -910,6 +910,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uniqueIdentifier: player
+--- !u!54 &716245337
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716245335}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!195 &716245342
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1073,7 +1089,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackTime: 1.5
   handsTransform: {fileID: 1893195610}
-  weapon: {fileID: 11400000, guid: 0e8b32628ca4ffb45a0a596ae73a3874, type: 2}
+  defaultWeapon: {fileID: 11400000, guid: 0e8b32628ca4ffb45a0a596ae73a3874, type: 2}
 --- !u!114 &1138024118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1511,7 +1527,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackTime: 1.5
   handsTransform: {fileID: 1210691620}
-  weapon: {fileID: 11400000, guid: 0e8b32628ca4ffb45a0a596ae73a3874, type: 2}
+  defaultWeapon: {fileID: 11400000, guid: 0e8b32628ca4ffb45a0a596ae73a3874, type: 2}
 --- !u!195 &1210691616
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1611,7 +1627,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackTime: 1.5
   handsTransform: {fileID: 1162862546}
-  weapon: {fileID: 11400000, guid: 0e8b32628ca4ffb45a0a596ae73a3874, type: 2}
+  defaultWeapon: {fileID: 11400000, guid: 0e8b32628ca4ffb45a0a596ae73a3874, type: 2}
 --- !u!195 &1245052196
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2118,6 +2134,12 @@ PrefabInstance:
       propertyPath: weapon
       value: 
       objectReference: {fileID: 11400000, guid: eb274a111f8a776479489c4b3a60d7b1,
+        type: 2}
+    - target: {fileID: 5654109230926544016, guid: 0f318af8c66c4d642b43e2aa15c4ba8b,
+        type: 3}
+      propertyPath: defaultWeapon
+      value: 
+      objectReference: {fileID: 11400000, guid: 0e8b32628ca4ffb45a0a596ae73a3874,
         type: 2}
     m_RemovedComponents:
     - {fileID: 7665821701844807972, guid: 0f318af8c66c4d642b43e2aa15c4ba8b, type: 3}
