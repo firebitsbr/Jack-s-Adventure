@@ -8,9 +8,9 @@ namespace RPG.Combat
     {
         Health target;
         float timeInterval = Mathf.Infinity;
-        [SerializeField] float range = 2f;
+
         [SerializeField] float attackTime = 1f;
-        [SerializeField] float weaponDmg = 20f;
+
         [SerializeField] Transform handsTransform = null;
         [SerializeField] Weapon weapon = null;
 
@@ -25,7 +25,11 @@ namespace RPG.Combat
             timeInterval += Time.deltaTime;
             if (target == null) return;
 
-            if (target.IsDead()) return;
+            if (target.IsDead())
+            {
+                Cancel(); 
+                return;
+            }
 
             if (GetRange())
             {
@@ -81,7 +85,7 @@ namespace RPG.Combat
 
         private bool GetRange()
         {
-            return Vector3.Distance(transform.position, target.transform.position) >= range;
+            return Vector3.Distance(transform.position, target.transform.position) >= weapon.getRange();
         }
 
         public void Cancel()
@@ -94,7 +98,7 @@ namespace RPG.Combat
         {
             if (target != null)
             {
-                target.TakeDamage(weaponDmg);
+                target.TakeDamage(weapon.getDmamage());
             }
 
         }
