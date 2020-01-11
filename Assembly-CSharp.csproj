@@ -118,6 +118,7 @@
      <None Include="Assets\Asset Store\RPG Character Animation Pack FREE\Elements\ImageEffects\Shaders\ScreenSpaceAmbientObscurance.shader" />
      <None Include="Assets\Asset Store\RPG Character Animation Pack FREE\Elements\ImageEffects\Shaders\_Antialiasing\NFAA.shader" />
      <None Include="Assets\Asset Store\RPG Character Animation Pack FREE\Elements\ImageEffects\Shaders\_DepthOfField\TiltShiftHdrLensBlur.shader" />
+     <None Include="Assets\Asset Store\Animations by Explosive\README - Usage Rights for these assets 1.txt" />
      <None Include="Assets\Asset Store\RPG Character Animation Pack FREE\Elements\ImageEffects\Shaders\_BloomAndFlares\VignetteShader.shader" />
      <None Include="Assets\Asset Store\RPG Character Animation Pack FREE\Elements\ImageEffects\Shaders\_DepthOfField\DepthOfFieldScatter.shader" />
      <None Include="Assets\Asset Store\RPG Character Animation Pack FREE\Elements\ImageEffects\Shaders\MotionBlur.shader" />
