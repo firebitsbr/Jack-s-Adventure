@@ -49,7 +49,7 @@ namespace RPG.Combat
         {
             currentWeapon = weapon;
             Animator animator = GetComponent<Animator>();
-            weapon.spawn(rightHandTransform, animator);
+            weapon.spawn(rightHandTransform, leftHandTransform, animator);
         }
 
         private void StartAttack()
