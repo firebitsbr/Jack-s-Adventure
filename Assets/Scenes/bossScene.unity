@@ -2173,6 +2173,14 @@ PrefabInstance:
       propertyPath: rightHandTransform
       value: 
       objectReference: {fileID: 1746967767}
+    - target: {fileID: 751847743, guid: 0f318af8c66c4d642b43e2aa15c4ba8b, type: 3}
+      propertyPath: m_Height
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 751847743, guid: 0f318af8c66c4d642b43e2aa15c4ba8b, type: 3}
+      propertyPath: m_Center.y
+      value: 45
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7665821701844807972, guid: 0f318af8c66c4d642b43e2aa15c4ba8b, type: 3}
     - {fileID: 535097392600200107, guid: 0f318af8c66c4d642b43e2aa15c4ba8b, type: 3}
