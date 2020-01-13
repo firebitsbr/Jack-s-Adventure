@@ -11,7 +11,8 @@ namespace RPG.Combat
 
         [SerializeField] float attackTime = 1f;
 
-        [SerializeField] Transform handsTransform = null;
+        [SerializeField] Transform rightHandTransform = null;
+        [SerializeField] Transform leftHandTransform = null;
         [SerializeField] Weapon defaultWeapon = null;
 
         Weapon currentWeapon = null;
@@ -48,7 +49,7 @@ namespace RPG.Combat
         {
             currentWeapon = weapon;
             Animator animator = GetComponent<Animator>();
-            weapon.spawn(handsTransform, animator);
+            weapon.spawn(rightHandTransform, animator);
         }
 
         private void StartAttack()
