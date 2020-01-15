@@ -37,7 +37,7 @@ namespace RPG.Combat
             Transform handTransform = isRightHand ? rightHandTransform : leftHandTransform;
 
             Projectile projectileItem = Instantiate(projectile, handTransform.position, Quaternion.identity);
-            projectileItem.setTarget(target);
+            projectileItem.setTarget(target, weaponDmg);
         }
 
         public float getRange()
