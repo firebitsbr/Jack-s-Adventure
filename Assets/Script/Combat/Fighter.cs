@@ -98,9 +98,23 @@ namespace RPG.Combat
         {
             if (target != null)
             {
+                return;
+            }
+
+            if (currentWeapon.hasProjectile())
+            {
+                currentWeapon.launchProjectile(leftHandTransform, rightHandTransform, target);
+            }
+            else
+            {
                 target.TakeDamage(currentWeapon.getDmamage());
             }
 
+        }
+
+        void Shoot()
+        {
+            Hit();
         }
     }
 }

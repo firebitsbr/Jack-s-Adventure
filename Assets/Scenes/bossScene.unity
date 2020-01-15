@@ -619,7 +619,7 @@ MonoBehaviour:
   m_ZDamping: 1
   m_ScreenX: 0.5
   m_ScreenY: 0.6
-  m_CameraDistance: 16
+  m_CameraDistance: 20
   m_DeadZoneWidth: 0.2
   m_DeadZoneHeight: 0.2
   m_DeadZoneDepth: 0
@@ -2003,17 +2003,17 @@ PrefabInstance:
     - target: {fileID: 9207838752139259788, guid: 2914e32a66f0a3a4a979425670a60f00,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 43.317715
+      value: 45.63964
       objectReference: {fileID: 0}
     - target: {fileID: 9207838752139259788, guid: 2914e32a66f0a3a4a979425670a60f00,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.931308
+      value: 14.896636
       objectReference: {fileID: 0}
     - target: {fileID: 9207838752139259788, guid: 2914e32a66f0a3a4a979425670a60f00,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -21.735989
+      value: -20.357483
       objectReference: {fileID: 0}
     - target: {fileID: 9207838752139259788, guid: 2914e32a66f0a3a4a979425670a60f00,
         type: 3}
@@ -2161,7 +2161,7 @@ PrefabInstance:
         type: 3}
       propertyPath: defaultWeapon
       value: 
-      objectReference: {fileID: 11400000, guid: 0e8b32628ca4ffb45a0a596ae73a3874,
+      objectReference: {fileID: 11400000, guid: 3e8f2c116991a5943ae7bc408cd6c0df,
         type: 2}
     - target: {fileID: 5654109230926544016, guid: 0f318af8c66c4d642b43e2aa15c4ba8b,
         type: 3}
@@ -2461,17 +2461,17 @@ PrefabInstance:
     - target: {fileID: 4258353553945127239, guid: c70aa00129683c34fad0bd3b998a4fc8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 43.317715
+      value: 45.63964
       objectReference: {fileID: 0}
     - target: {fileID: 4258353553945127239, guid: c70aa00129683c34fad0bd3b998a4fc8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.931308
+      value: 14.896636
       objectReference: {fileID: 0}
     - target: {fileID: 4258353553945127239, guid: c70aa00129683c34fad0bd3b998a4fc8,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -21.735989
+      value: -20.357483
       objectReference: {fileID: 0}
     - target: {fileID: 4258353553945127239, guid: c70aa00129683c34fad0bd3b998a4fc8,
         type: 3}

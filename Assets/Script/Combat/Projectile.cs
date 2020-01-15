@@ -1,11 +1,12 @@
 using System;
 using UnityEngine;
+using RPG.Core;
 
 namespace RPG.Combat
 {
     public class Projectile : MonoBehaviour
     {
-        [SerializeField] Transform targetTransform = null;
+        Health targetTransform = null;
         [SerializeField] float arrowSpeed = 1;
 
         private void Update()
@@ -18,15 +19,20 @@ namespace RPG.Combat
             transform.Translate(Vector3.forward * Time.deltaTime * arrowSpeed);
         }
 
+        public void setTarget(Health targ)
+        {
+            targetTransform = targ;
+        }
+
         private Vector3 getAimLocation()
         {
             CapsuleCollider targetCollider = targetTransform.GetComponent<CapsuleCollider>();
             if (targetCollider == null)
             {
-                return targetTransform.position;
+                return targetTransform.transform.position;
             }
-            print(targetCollider.height * Vector3.up /2);
-            return targetTransform.position + Vector3.up * targetCollider.height / 2;
+            Vector3 height = new Vector3(0, 1.5f, 0);
+            return targetTransform.transform.position + Vector3.up * height.y;
         }
     }
 }
