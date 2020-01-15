@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 1870312470521918564}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4476205587610060123}
   m_Father: {fileID: 0}
@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd2f0953fb22d6447b4cc16fcfa860d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowSpeed: 3
+  arrowSpeed: 6
 --- !u!1001 &4476205587609935835
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -70,19 +70,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a0d6a56298571f1429658686f72d02d7, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.7071068
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a0d6a56298571f1429658686f72d02d7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a0d6a56298571f1429658686f72d02d7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a0d6a56298571f1429658686f72d02d7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a0d6a56298571f1429658686f72d02d7, type: 3}
       propertyPath: m_RootOrder
@@ -98,7 +98,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a0d6a56298571f1429658686f72d02d7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a0d6a56298571f1429658686f72d02d7, type: 3}
       propertyPath: m_LocalScale.y

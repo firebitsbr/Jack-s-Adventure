@@ -96,13 +96,16 @@ namespace RPG.Combat
 
         void Hit()
         {
-            if (target != null)
+            if (target == null)
             {
                 return;
             }
 
+            print("Hit");
+
             if (currentWeapon.hasProjectile())
             {
+                print("Has Projectile");
                 currentWeapon.launchProjectile(leftHandTransform, rightHandTransform, target);
             }
             else
@@ -114,6 +117,7 @@ namespace RPG.Combat
 
         void Shoot()
         {
+            print("Shoot animation called");
             Hit();
         }
     }
